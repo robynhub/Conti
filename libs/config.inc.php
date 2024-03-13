@@ -16,9 +16,9 @@
 /* DB name */
 $dbname = "conti";
 /* Db user */
-$dbuser = "root";
+$dbuser = "conti";
 /* Db Pass */
-$dbpass = "Ass20ict11";
+$dbpass = "conti";
 /* Db host */
 $dbhost = "localhost";
 /* Log file */
