@@ -1,0 +1,62 @@
+-- phpMyAdmin SQL Dump
+-- version 2.6.4-pl3
+-- http://www.phpmyadmin.net
+-- 
+-- Host: localhost
+-- Generation Time: Mar 28, 2006 at 12:20 PM
+-- Server version: 4.0.25
+-- PHP Version: 4.4.0
+-- 
+-- Database: `Conti`
+-- 
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `Movimenti`
+-- 
+
+DROP TABLE IF EXISTS `Movimenti`;
+CREATE TABLE IF NOT EXISTS `Movimenti` (
+  `IDMovimento` smallint(6) NOT NULL auto_increment,
+  `Utente` varchar(30) NOT NULL default '',
+  `Creditore` varchar(30) NOT NULL default '',
+  `IDSpesa` smallint(6) NOT NULL default '0',
+  `Causale` varchar(20) NOT NULL default '',
+  `Importo` float NOT NULL default '0',
+  `Pagato` char(2) NOT NULL default 'no',
+  PRIMARY KEY  (`IDMovimento`)
+);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `Spese`
+-- 
+
+DROP TABLE IF EXISTS `Spese`;
+CREATE TABLE IF NOT EXISTS `Spese` (
+  `IDSpesa` smallint(6) NOT NULL auto_increment,
+  `Utente` varchar(16) NOT NULL default '',
+  `Data` date NOT NULL default '0000-00-00',
+  `Scadenza` date default NULL,
+  `Descrizione` varchar(30) default NULL,
+  `Causale` varchar(20) NOT NULL default '',
+  `Importo` float NOT NULL default '0',
+  `Pagato` char(2) NOT NULL default 'no',
+  PRIMARY KEY  (`IDSpesa`)
+);
+
+-- --------------------------------------------------------
+
+-- 
+-- Table structure for table `Utenti`
+-- 
+
+DROP TABLE IF EXISTS `Utenti`;
+CREATE TABLE IF NOT EXISTS `Utenti` (
+  `IDUtente` smallint(6) unsigned zerofill NOT NULL auto_increment,
+  `Username` varchar(16) NOT NULL default '',
+  `Password` varchar(128) NOT NULL default '',
+  PRIMARY KEY  (`IDUtente`)
+);

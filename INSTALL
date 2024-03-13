@@ -1,0 +1,26 @@
+Conti - Copyright Antonio Bartolini 2006 
+========================================
+
+
+Install instructions:
+--------------------
+
+1) Create a new database for the application in mySQL 
+   and put in the new structure:
+
+# mysqladmin -u USERNAME -p create Conti
+# mysql -u USERNAME -p Conti < db.mysql
+
+
+2) Edit the file: libs/config.inc.php
+
+3) goto: http://yourcontisite/libs/adduser.php
+
+and add users... 
+
+4) goto: http://yourcontisite/
+
+ENJOY! ^_^
+
+
+
